@@ -1,53 +1,70 @@
 // //first to win 10 points
 
-// //from user
-// const userInput;
-
-// //from random generator
+let res;
+let count = 0;
+let countMarvin = 0;
 
 const allOptions = ["rock", "paper", "scissors"];
 
-//generate a number between 0-3
-const loca = () => Math.floor(Math.random() * 3);
+//generate a number between 0-3 and get a option from allsrings
+const botChoice = function () {
+  return allOptions[Math.floor(Math.random() * 3)];
+};
 
-const aiTurn = () => allOptions[loca()];
-
-// /*
-
-// if !userInput within timer generate a random from rockpaper and SpeechSynthesisErrorEvent,
-// else use userInput
-
-// */
-
-// //Number(userInput) == aiTurn; //draw
-
-// document
-//   .querySelector(".rock")
-//   .addEventListener("click", console.log(allOptions[0]));
-// document
-//   .querySelector(".paper")
-//   .addEventListener("click", console.log(allOptions[1]));
-// document
-//   .querySelector(".scissors")
-//   .addEventListener("click", console.log(allOptions[2]));
-
-// function rockPressed() {
-//   console.log(allOptions[0]);
-
-//   console.log(aiTurn(), loca());
-// }
-
-// function paPressed() {
-//   console.log(allOptions[1]);
-
-//   console.log(aiTurn(), loca());
-// }
-
-// function scPressed() {
-//   console.log(allOptions[2]);
-//   console.log(aiTurn(), loca());
-// }
-
-for (let i = 0; i < 30; i++) {
-  console.log(loca(), allOptions[loca()]);
+function rockPressed() {
+  const marvin = botChoice();
+  if (marvin == "rock") res = "draw";
+  else if (marvin == "paper") res = "lose";
+  else if (marvin == "scissors") {
+    res = "win";
+    count++;
+    document.querySelector(".score_box").textContent = count;
+    if (count == 10)
+      document.querySelector(".result").textContent =
+        "Congratultaion You're the winner🎉✨";
+  }
+  console.log(res);
 }
+
+function paPressed() {
+  const marvin = botChoice();
+  if (marvin == "rock") {
+    res = "win";
+    count++;
+    if (count == 10)
+      document.querySelector(".result").textContent =
+        "Congratultaion You're the winner🎉✨";
+
+    document.querySelector(".score_box").textContent = count;
+  } else if (marvin == "paper") res = "draw";
+  else if (marvin == "scissors") {
+    res = "lose";
+    countMarvin++;
+  }
+  console.log(res);
+}
+
+function scPressed() {
+  const marvin = botChoice();
+  if (marvin == "rock") {
+    res = "lose";
+    countMarvin++;
+  } else if (marvin == "paper") {
+    res = "win";
+    count++;
+    if (count == 10)
+      document.querySelector(".result").textContent =
+        "Congratultaion You're the winner🎉✨";
+
+    document.querySelector(".score_box").textContent = count;
+  } else if (marvin == "scissors") res = "draw";
+  console.log(res);
+}
+
+//document.querySelector(".score_box").textContent = count;
+
+//document.querySelector(".score_box").textContent = countMarvin;
+
+if (count == 10)
+  document.querySelector(".result").textContent =
+    "Congratultaion You're the winner🎉✨";
