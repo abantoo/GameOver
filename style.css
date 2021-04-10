@@ -10,19 +10,15 @@ body {
   );
 }
 
-button {
-  display: flex;
-  justify-content: center;
-  height: 5vh;
-  width: auto;
-}
-
-.rock,
-.paper,
-.scissors {
-}
-
 img {
   height: 100px;
   width: 100px;
+}
+
+button {
+  background-color: transparent;
+}
+
+.buitton-holder {
+  display: flex;
 }

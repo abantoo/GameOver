@@ -1,12 +1,9 @@
-// //first to win 10 points
-
 let res;
 let count = 0;
 let countMarvin = 0;
 
 const allOptions = ["rock", "paper", "scissors"];
 
-//generate a number between 0-3 and get a option from allsrings
 const botChoice = function () {
   return allOptions[Math.floor(Math.random() * 3)];
 };
@@ -14,8 +11,14 @@ const botChoice = function () {
 function rockPressed() {
   const marvin = botChoice();
   if (marvin == "rock") res = "draw";
-  else if (marvin == "paper") res = "lose";
-  else if (marvin == "scissors") {
+  else if (marvin == "paper") {
+    res = "lose";
+    countMarvin++;
+    if (countMarvin == 10)
+      document.querySelector(".result").textContent = "Marvin wins 🖥💻";
+    document.querySelector(".score_marvin").textContent =
+      "Marvin's Score" + countMarvin;
+  } else if (marvin == "scissors") {
     res = "win";
     count++;
     document.querySelector(".score_box").textContent = count;
@@ -40,6 +43,10 @@ function paPressed() {
   else if (marvin == "scissors") {
     res = "lose";
     countMarvin++;
+    if (countMarvin == 10)
+      document.querySelector(".result").textContent = "Marvin wins 🖥💻";
+    document.querySelector(".score_marvin").textContent =
+      "Marvin's Score " + countMarvin;
   }
   console.log(res);
 }
@@ -49,9 +56,14 @@ function scPressed() {
   if (marvin == "rock") {
     res = "lose";
     countMarvin++;
+    if (countMarvin == 10)
+      document.querySelector(".result").textContent = "Marvin wins 🖥💻";
+    document.querySelector(".score_marvin").textContent =
+      "Marvin's Score " + countMarvin;
   } else if (marvin == "paper") {
     res = "win";
     count++;
+
     if (count == 10)
       document.querySelector(".result").textContent =
         "Congratultaion You're the winner🎉✨";
@@ -60,11 +72,3 @@ function scPressed() {
   } else if (marvin == "scissors") res = "draw";
   console.log(res);
 }
-
-//document.querySelector(".score_box").textContent = count;
-
-//document.querySelector(".score_box").textContent = countMarvin;
-
-if (count == 10)
-  document.querySelector(".result").textContent =
-    "Congratultaion You're the winner🎉✨";
