@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+.random-button {
+  display: flex;
+  justify-content: center;
+
+  margin: 70px;
+  height: 100px;
+}
+
+.rbtn {
+  background: #f4511e;
+  font-family: "Bangers", cursive;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 5rem;
+  border: 3px solid black;
+  color: #03a9f4;
+  text-shadow: 0 0 10px #000;
+}
+
+.rbtn:hover {
+  cursor: crosshair;
+  border: 3px solid #03a9f4;
+  color: #424242;
+  background: transparent;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: none;
+}

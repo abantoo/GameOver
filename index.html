@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./glitch.css" />
+    <link rel="stylesheet" href="./randombutton.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./score.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -45,7 +48,7 @@
             </div>
           </div>
           <div class="random-button">
-            <button>Random</button>
+            <button class="rbtn"><span>Random !</span></button>
           </div>
         </div>
 
@@ -57,22 +60,37 @@
       </div>
 
       <div class="scorebox-holder glitch">
-        <h1 class="score_box glitch">
-          <span aria-hidden="true">Your Score</span>
-          Your Score
-          <span aria-hidden="true">Your Score</span>
-        </h1>
-        <h1 class="score_marvin glitch">
-          <span aria-hidden="true"> Marvin's Score</span>
-          Marvin's Score
-          <span aria-hidden="true"> Marvin's Score</span>
-        </h1>
+        <div class="your-score-div">
+          <div class="cent">
+            <h1 class="score_box glitch">
+              <span aria-hidden="true">Your Score</span>
+              Your Score
+              <span aria-hidden="true">Your Score</span>
+            </h1>
+          </div>
 
-        <h1 class="result glitch">
-          <span aria-hidden="true">Keep Going</span>
-          Keep going
-          <span aria-hidden="true">Keep Going</span>
-        </h1>
+          <h1 class="user-box"></h1>
+        </div>
+
+        <div class="marvin-score-div">
+          <div class="cent">
+            <h1 class="score_marvin glitch">
+              <span aria-hidden="true"> Marvin's Score</span>
+              Marvin's Score
+              <span aria-hidden="true"> Marvin's Score</span>
+            </h1>
+          </div>
+
+          <h1 class="marvin-box"></h1>
+        </div>
+
+        <div class="result-div">
+          <h1 class="result glitch">
+            <span aria-hidden="true">Keep Going...</span>
+            Keep going...
+            <span aria-hidden="true">Keep Going...</span>
+          </h1>
+        </div>
       </div>
     </div>
 

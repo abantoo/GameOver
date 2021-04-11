@@ -1,0 +1,46 @@
+.scorebox-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.marvin-score-div,
+.your-score-div,
+.result-div {
+  margin: 10px;
+  border: 3px transparent;
+}
+
+.marvin-score-div,
+.your-score-div {
+  display: flex;
+  justify-content: space-around;
+  height: 20%;
+}
+.result-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
+}
+
+.score_box,
+.score_marvin,
+.result {
+  font-size: 4rem;
+  text-shadow: 0 0 10px #000 !important;
+}
+
+.marvin-box,
+.user-box {
+  width: 15%;
+  margin: 20px;
+  border: 10px inset #c724b1;
+}
+.cent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 10px;
+}
