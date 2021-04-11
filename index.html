@@ -5,39 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./glitch.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Welcome to Rock Paper Scissors Game</h1>
+    <h1 class="glitch">
+      <span aria-hidden="true">Rock Paper Scissors</span>
+      Rock Paper Scissors
+      <span aria-hidden="true">Rock Paper Scissors</span>
+    </h1>
+    <div class="parent-div">
+      <div class="display-case">
+        <div class="all-buttons">
+          <div>
+            <h2 class="glitch">
+              <span aria-hidden="true">Select Your Option</span>
+              Select Your Option
+              <span aria-hidden="true">Select Your Option</span>
+            </h2>
+          </div>
 
-    <div class="button-holder">
-      <h2>Select your option</h2>
-      <div>
-        <button class="rock" onclick="rockPressed()">
-          <img src="./icons/stone.png" alt="" />
-        </button>
+          <div class="button-holder">
+            <div>
+              <button class="rock" onclick="rockPressed()">
+                <img src="./icons/stone.png" alt="" />
+              </button>
+            </div>
+
+            <div>
+              <button class="paper" onclick="paPressed()">
+                <img src="./icons/toilet-paper.png" alt="" />
+              </button>
+            </div>
+
+            <div>
+              <button class="scissors" onclick="scPressed()">
+                <img src="./icons/scissors.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="random-button">
+            <button>Random</button>
+          </div>
+        </div>
+
+        <div>
+          <h1>Your choice</h1>
+        </div>
+        <h1>Marvin's choice</h1>
+        <div></div>
       </div>
 
-      <div>
-        <button class="paper" onclick="paPressed()">
-          <img src="./icons/toilet-paper.png" alt="" />
-        </button>
+      <div class="scorebox-holder glitch">
+        <h1 class="score_box">Your Score</h1>
+        <h1 class="score_marvin">Marvin's Score</h1>
+        <h1 class="result">Keep going</h1>
       </div>
-
-      <div>
-        <button class="scissors" onclick="scPressed()">
-          <img src="./icons/scissors.png" alt="" />
-        </button>
-      </div>
-    </div>
-
-    <div>
-      <h1 class="score_box">Your Score</h1>
-      <h1 class="score_marvin">Marvin's Score</h1>
-    </div>
-
-    <div>
-      <h1 class="result">Keep going</h1>
     </div>
 
     <script src="./script.js"></script>
