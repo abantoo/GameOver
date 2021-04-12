@@ -8,7 +8,7 @@ const botChoice = function () {
   return allOptions[Math.floor(Math.random() * 3)];
 };
 
-function rockPressed() {
+const rockPressed = function () {
   const marvin = botChoice();
   if (marvin == "rock") res = "draw";
   else if (marvin == "paper") {
@@ -16,8 +16,7 @@ function rockPressed() {
     countMarvin++;
     if (countMarvin == 10)
       document.querySelector(".result").textContent = "Marvin wins 🖥💻";
-    document.querySelector(".marvin-box").textContent =
-      "Marvin's Score" + countMarvin;
+    document.querySelector(".marvin-box").textContent = countMarvin;
   } else if (marvin == "scissors") {
     res = "win";
     count++;
@@ -28,9 +27,9 @@ function rockPressed() {
   }
 
   return count;
-}
+};
 
-function paPressed() {
+const paperPressed = function () {
   const marvin = botChoice();
   if (marvin == "rock") {
     res = "win";
@@ -46,21 +45,19 @@ function paPressed() {
     countMarvin++;
     if (countMarvin == 10)
       document.querySelector(".result").textContent = "Marvin wins 🖥💻";
-    document.querySelector(".marvin-box").textContent =
-      "Marvin's Score " + countMarvin;
+    document.querySelector(".marvin-box").textContent = countMarvin;
   }
   return count;
-}
+};
 
-function scPressed() {
+const scissorsPressed = function () {
   const marvin = botChoice();
   if (marvin == "rock") {
     res = "lose";
     countMarvin++;
     if (countMarvin == 10)
       document.querySelector(".result").textContent = "Marvin wins 🖥💻";
-    document.querySelector(".marvin-box").textContent =
-      "Marvin's Score " + countMarvin;
+    document.querySelector(".marvin-box").textContent = countMarvin;
   } else if (marvin == "paper") {
     res = "win";
     count++;
@@ -72,6 +69,56 @@ function scPressed() {
     document.querySelector(".user-box").textContent = count;
   } else if (marvin == "scissors") res = "draw";
   return count;
-}
+};
 
-//console.log(count);
+const randomPressed = function () {
+  const user = botChoice();
+  const marvin = botChoice();
+
+  if (marvin === user) res = "draw";
+  //user win condition
+  else if (
+    (marvin === "rock" && user === "papaer") ||
+    (marvin === "papaer" && user === "scissors") ||
+    (marvin === "scissors" && user === "rock")
+  ) {
+    res = "win";
+    count++;
+    if (count == 10)
+      document.querySelector(".result").textContent =
+        "Congratultaion You're the winner🎉✨";
+
+    document.querySelector(".user-box").textContent = count;
+  } else {
+    countMarvin++;
+    if (countMarvin == 10)
+      document.querySelector(".result").textContent = "Marvin wins 🖥💻";
+    document.querySelector(".marvin-box").textContent = countMarvin;
+    res = "lose";
+  }
+};
+
+// const randomPressed = function () {
+//   const user = botChoice();
+//   const marvin = botChoice();
+
+//   const marvin = botChoice();
+
+//   if (marvin === user) res = draw;
+//   //user win condition
+//   else if (
+//     (marvin === "rock" && user === "papaer") ||
+//     (marvin === "papaer" && user === "scissors") ||
+//     (marvin === "scissors" && user === "rock")
+//   ) {
+//     res = "win";
+//     count++;
+//     if(count === 10)
+//   }
+
+//   else {
+//     res = "lose";
+
+//   }
+
+// };
