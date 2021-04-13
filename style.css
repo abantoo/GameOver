@@ -33,11 +33,34 @@
   border: 3px transparent #333;
 }
 
-.marvin-choice {
+.marvin-choice,
+.marvin-choice-res {
   color: #e65100;
 }
 .scorebox-holder {
   margin: 10px;
   width: 40%;
   border: 5px solid #333;
+}
+
+.choice,
+.choice2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.marvin-choice,
+.y-c {
+  width: 50%;
+
+  margin: 10px;
+
+  font-size: 3rem;
+}
+
+.marvin-choice-res,
+.your-choice {
+  width: 30%;
+  margin: 10px;
+  font-size: 3rem;
 }

@@ -17,6 +17,11 @@
   justify-content: space-around;
   height: 20%;
 }
+
+.marvin-score-div {
+  color: #ff3d00;
+}
+
 .result-div {
   display: flex;
   flex-direction: column;
@@ -36,7 +41,8 @@
   color: #dd2c00;
   width: 10%;
   margin: 20px;
-  border: 10px inset #d50000;
+  border: 10px inset #ff3d00;
+  border-radius: 25px;
   font-size: 4rem;
   display: flex;
   flex-direction: column;
@@ -48,4 +54,22 @@
   justify-content: center;
   width: 60%;
   margin: 10px;
+}
+
+.round {
+  background-color: #ff6e40;
+  height: 100px;
+  width: 150px;
+  margin-top: 25px;
+  width: 50%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: center;
+  border: 10px solid #ff3d00;
+  border-radius: 25px;
+}
+
+.round-res {
+  margin: 20px;
+  font-size: 4rem;
 }
