@@ -10,13 +10,21 @@ const botChoice = function () {
   return wewew;
 };
 
+const updateScoreboardU = function (count) {
+  document.querySelector(".user-box").textContent = count;
+};
+
+const updateScoreboardM = function (countMarvin) {
+  document.querySelector(".marvin-box").textContent = countMarvin;
+};
 const marvinWins = function () {
   document.querySelector(".round-res").textContent = "lost";
   document.querySelector(".round-res").style.color = "#dd2c00";
   countMarvin++;
   if (countMarvin === 10)
     document.querySelector(".result").textContent = "Marvin wins 🖥💻";
-  document.querySelector(".marvin-box").textContent = countMarvin;
+
+  updateScoreboardM(countMarvin);
 };
 
 const youWin = function () {
@@ -29,7 +37,7 @@ const youWin = function () {
     document.querySelector(".result").textContent =
       "Congratultaion!! You're the winner🎉✨";
 
-  document.querySelector(".user-box").textContent = count;
+  updateScoreboardU(count);
 };
 
 //when user choose rock
@@ -39,7 +47,7 @@ const rockPressed = function () {
   if (marvin === "rock") res = "draw";
   else if (marvin === "paper") marvinWins();
   else if (marvin === "scissors") youWin();
-  return count;
+  console.log(count);
 };
 
 //when user choose paper
@@ -49,7 +57,7 @@ const paperPressed = function () {
   if (marvin === "rock") youWin();
   else if (marvin === "paper") res = "draw";
   else if (marvin === "scissors") marvinWins();
-  return count;
+  console.log(count);
 };
 
 //when user choose scissors
@@ -59,11 +67,12 @@ const scissorsPressed = function () {
   if (marvin === "rock") marvinWins();
   else if (marvin === "paper") youWin();
   else if (marvin === "scissors") res = "draw";
-  return count;
+  console.log(count);
 };
 
 const randomPressed = function () {
-  const user = botChoice();
+  const user = allOptions[Math.floor(Math.random() * 3)];
+  document.querySelector(".your-choice").textContent = user;
   const marvin = botChoice();
 
   if (marvin === user) res = "draw";
@@ -75,6 +84,12 @@ const randomPressed = function () {
   )
     youWin();
   else marvinWins();
+  console.log(count);
+};
 
-  return count;
+const again = function () {
+  count = 0;
+  countMarvin = 0;
+  updateScoreboardU(0);
+  updateScoreboardM(0);
 };

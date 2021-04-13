@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-.random-button {
+.random-button,
+.again-div {
   display: flex;
   justify-content: center;
 
@@ -7,7 +8,8 @@
   height: 100px;
 }
 
-.rbtn {
+.rbtn,
+.again {
   background: #f4511e;
   font-family: "Bangers", cursive;
   display: flex;
@@ -19,7 +21,8 @@
   text-shadow: 0 0 10px #000;
 }
 
-.rbtn:hover {
+.rbtn:hover,
+.again:hover {
   cursor: crosshair;
   border: 3px solid #03a9f4;
   color: #424242;
